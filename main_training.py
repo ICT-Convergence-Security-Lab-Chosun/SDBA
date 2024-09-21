@@ -128,7 +128,7 @@ if __name__ == '__main__':
                         type=bool,
                         help='semantic_target')
 
-    parser.add_argument('--defense',
+    parser.add_argument('--norm_clip',
                         default=False,
                         type=bool,
                         help='defense Norm Clipping')
