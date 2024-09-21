@@ -16,7 +16,6 @@ Enter the above command, train the model for 2000 rounds, and save the trained m
 
 Then, perform the SDBA backdoor attack using the trained model.
 
----
 
 ## Performing the Attack
 **(Baseline)**\
@@ -30,8 +29,6 @@ To perform the Neurotoxin attack, rename helper_neurotoxin.py to helper.py and e
 `python main_training.py --params utils/words_reddit_lstm.yaml --run_name neurotoxin_attack  --GPU_id 0  --masking True --ih 0.2 --hh 1.0 --is_poison True --poison_lr 0.06 --start_epoch 2001 --semantic_target True --attack_num 100 --same_structure True --aggregate_all_layer 1 --s_norm 3.0 --sentence_id_list 0`
 
 For various attack examples, please refer to the example.sh file.
-
----
 
 ## Parameter list
 **General Parameters**\
