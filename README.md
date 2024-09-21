@@ -8,7 +8,7 @@ First, download the Reddit dataset from https://github.com/ebagdasa/backdoor_fed
 
 Second, Set up the model saving checkpoint.
 
-In utils/words_reddit_lstm.yaml, input save_on_epochs: [2000] and save the file.
+In `utils/words_reddit_lstm.yaml`, input `save_on_epochs: [2000]` and save the file.
 
 `python main_training.py --params utils/words_reddit_lstm.yaml --run_name benign_2000  --GPU_id 0 --start_epoch 1 --semantic_target True --same_structure True --aggregate_all_layer 1 --s_norm 3.0 --sentence_id_list 0`
 
