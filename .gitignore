@@ -3,9 +3,9 @@ wandb/
 
 logs/
 bash_files/
-saved*
+#saved*
 *.out
-data/
+#data/
 slurm_log
 
 # Byte-compiled / optimized / DLL files
