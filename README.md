@@ -35,10 +35,10 @@ For various attack examples, please refer to the example.sh file.
 --is_poison True : Enable poisoning task\
 --poison_lr 0.6 : Learning rate for malicious clients\
 --attack_num 100 : Number of attacks to perform\
---start_epoch : Starting epoch for the training\
---run_name : Name for saved backdoor or benign model file\
+--start_epoch 2001 : Starting epoch for the training\
+--run_name filename : Name for saved backdoor or benign model file\
 --PGD 1 : Activate Projected Gradient Descent\
---GPU_id : Specify the GPU ID to use\
+--GPU_id 0 : Specify the GPU ID to use\
 --masking True : Enable SDBA masking technique
 
 **Defense Parameters**\
