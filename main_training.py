@@ -328,15 +328,9 @@ if __name__ == '__main__':
         print('diff_privacy on? : ', helper.params['diff_privacy'])
         print('multi_krum on? : ', helper.params['multi_krum'])
         print('flame on ? : ', helper.params['flame'])
-        #weight_accumulator = train(helper, epoch, criterion, sampled_participants)
         weight_accumulator, w_locals = train(helper, epoch, criterion, sampled_participants)
-        #print('weight_accumulator_array : ', weight_accumulator_array)
         print(f'time spent on training: {time.time() - t}')
-        # Average the models
-        #helper.average_shrink_models(target_model=helper.target_model,
-        #                             weight_accumulator=weight_accumulator, epoch=epoch, wandb=wandb)
-        #clipped_sorted_idx_score = helper.FedAvg_w_multiKrum(w=w_locals, target_model=helper.target_model)
-       
+
         ####################
         #Average the models#
         if helper.params['multi_krum']:
