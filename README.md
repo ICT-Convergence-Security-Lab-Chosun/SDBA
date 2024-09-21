@@ -1,4 +1,4 @@
-# SDBA
+# SDBA: A Stealthy and Long-Lasting Durable Backdoor Attacks in Federated Learning
 The code for the SDBA paper(arXiv link) was implemented using Python 3.12.1, PyTorch 2.4.0, and Torchvision 0.19.0.
 
 ---
@@ -32,27 +32,27 @@ For various attack examples, please refer to the example.sh file.
 
 ## Parameter list
 **General Parameters**\
---is_poison True : Enable poisoning task\
---poison_lr 0.6 : Learning rate for malicious clients\
---attack_num 100 : Number of attacks to perform\
---start_epoch 2001 : Starting epoch for the training\
---run_name filename : Name for saved backdoor or benign model file\
---PGD 1 : Activate Projected Gradient Descent\
---GPU_id 0 : Specify the GPU ID to use\
---masking True : Enable SDBA masking technique
+`--is_poison True` : Enable poisoning task\
+`--poison_lr 0.6` : Learning rate for malicious clients\
+`--attack_num 100` : Number of attacks to perform\
+`--start_epoch 2001` : Starting epoch for the training\
+`--run_name filename` : Name for saved backdoor or benign model file\
+`--PGD 1` : Activate Projected Gradient Descent\
+`--GPU_id 0` : Specify the GPU ID to use\
+`--masking True` : Enable SDBA masking technique
 
 **Defense Parameters**\
---norm_clip True : Enable Norm Clipping defense\
---multi_krum True : Enable Multi-Krum defense\
---diff_privacy True : Enable Weak Differential Privacy defense\
---flame True : Enable Flame defense
+`--norm_clip True` : Enable Norm Clipping defense\
+`--multi_krum True` : Enable Multi-Krum defense\
+`--diff_privacy True` : Enable Weak Differential Privacy defense\
+`--flame True` : Enable Flame defense
 
 **LSTM Model Parameters**\
---ih 0.2 : Input-hidden layer masking ratio\
---hh 1.0 : Hidden-hidden layer masking ratio
+`--ih 0.2` : Input-hidden layer masking ratio\
+`--hh 1.0` : Hidden-hidden layer masking ratio
 
 **GPT-2 Model Parameters**\
---mlp_fc 1.0 : MLP fully connected layer masking ratio
+`--mlp_fc 1.0` : MLP fully connected layer masking ratio
 
 
 
