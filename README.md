@@ -18,6 +18,14 @@ Then, perform the SDBA backdoor attack using the trained model.
 
 
 ## Performing the Attack
+
+### SDBA
+`python main_training.py --params utils/words_reddit_lstm.yaml --run_name neurotoxin_attack  --GPU_id 0  --masking True --ih 0.2 --hh 1.0 --is_poison True --poison_lr 0.06 --start_epoch 2001 --semantic_target True --attack_num 100 --same_structure True --aggregate_all_layer 1 --s_norm 3.0 --sentence_id_list 0`
+
+For various attack examples, please refer to the `example.sh` file.
+
+### Other Attacks for Comparison
+
 **Baseline**\
 `python main_training.py --params utils/words_reddit_lstm.yaml --run_name baseline_attack  --GPU_id 0  --gradmask_ratio 1.0 --is_poison True --poison_lr 0.06 --start_epoch 2001 --semantic_target True --attack_num 100 --same_structure True --aggregate_all_layer 1 --s_norm 3.0 --sentence_id_list 0`
 
@@ -25,13 +33,11 @@ Then, perform the SDBA backdoor attack using the trained model.
 To perform the Neurotoxin attack, rename `helper_neurotoxin.py` to `helper.py` and execute the following command\
 `python main_training.py --params utils/words_reddit_lstm.yaml --run_name neurotoxin_attack  --GPU_id 0  --gradmask_ratio 0.98 --is_poison True --poison_lr 0.06 --start_epoch 2001 --semantic_target True --attack_num 100 --same_structure True --aggregate_all_layer 1 --s_norm 3.0 --sentence_id_list 0`
 
-**SDBA**\
-`python main_training.py --params utils/words_reddit_lstm.yaml --run_name neurotoxin_attack  --GPU_id 0  --masking True --ih 0.2 --hh 1.0 --is_poison True --poison_lr 0.06 --start_epoch 2001 --semantic_target True --attack_num 100 --same_structure True --aggregate_all_layer 1 --s_norm 3.0 --sentence_id_list 0`
 
-For various attack examples, please refer to the `example.sh` file.
+
 
 ## Parameter list
-**General Parameters**\
+### General Parameters
 `--is_poison True` : Enable poisoning task\
 `--poison_lr 0.6` : Learning rate for malicious clients\
 `--attack_num 100` : Number of attacks to perform\
@@ -41,17 +47,17 @@ For various attack examples, please refer to the `example.sh` file.
 `--GPU_id 0` : Specify the GPU ID to use\
 `--masking True` : Enable SDBA masking technique
 
-**Defense Parameters**\
+### Defense Parameters
 `--norm_clip True` : Enable Norm Clipping defense\
 `--multi_krum True` : Enable Multi-Krum defense\
 `--diff_privacy True` : Enable Weak Differential Privacy defense\
 `--flame True` : Enable Flame defense
 
-**LSTM Model Parameters**\
+### LSTM Model Parameters
 `--ih 0.2` : Input-hidden layer masking ratio\
 `--hh 1.0` : Hidden-hidden layer masking ratio
 
-**GPT-2 Model Parameters**\
+### GPT-2 Model Parameters
 `--mlp_fc 1.0` : MLP fully connected layer masking ratio
 
 
