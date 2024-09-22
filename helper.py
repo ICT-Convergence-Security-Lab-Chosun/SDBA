@@ -119,6 +119,8 @@ class Helper:
             else:
                 raise ValueError("Unkonwn task")
         mask_grad_list = []
+
+        # Next Token Prediction
         if helper.params['aggregate_all_layer'] == 1:
             grad_list = []
             print('pgd : ', helper.params['PGD'])
@@ -126,8 +128,6 @@ class Helper:
                 if parms.requires_grad:
                     grad_list.append(parms.grad.abs().view(-1))
             grad_list = torch.cat(grad_list).cuda()
-            #_, indices = torch.topk(-1*grad_list, int(len(grad_list)*ratio))
-            #indices = list(indices.cpu().numpy())
             count = 0
             for layer_name, parms in model.named_parameters():
                 print('---------start--------------')
@@ -137,11 +137,8 @@ class Helper:
                     print('ih ratio : ', helper.params['ih'])
                     print('hh ratio : ', helper.params['hh'])
                 if parms.requires_grad:
-                    #count_list = list(range(count, count + len(parms.grad.abs().view(-1))))
-                    #index_list = list(set(count_list).intersection(set(indices)))
                     mask_flat = np.zeros( count + len(parms.grad.abs().view(-1))  )
                     print('mask_flat_shape : ', mask_flat.shape)
-                    #mask_flat[index_list] = 1.0
                     grad_flat = parms.grad.abs().view(-1)
                     print('grad_flat shape : ', grad_flat.shape)
 
@@ -165,14 +162,14 @@ class Helper:
                         zeros_count = len(mask_flat[count:count+len(parms.grad.abs().view(-1))]) - ones_count
                         print(f'count 1 : {ones_count}, count 0 : {zeros_count}')
 
-                    print('통과')
-                    #print('mask_flat : ', mask_flat[count:count + len(parms.grad.abs().view(-1))])
                     mask_flat = mask_flat[count:count + len(parms.grad.abs().view(-1))]
                     mask = list(mask_flat.reshape(parms.grad.abs().size()))
 
                     mask = torch.from_numpy(np.array(mask, dtype='float32')).cuda()
                     mask_grad_list.append(mask)
                     count += len(parms.grad.abs().view(-1))
+
+        # Sentiment Analysis
         else:
             for layer_name, parms in model.named_parameters():
                 print('---------start--------------')
@@ -200,7 +197,6 @@ class Helper:
                         zeros_count = len(mask_flat) - ones_count
                         print(f'count 1 : {ones_count}, count 0 : {zeros_count}')
                     
-                    #print('mask_flat : ', mask_flat)
                     mask_grad_list.append(mask_flat.reshape(parms.grad.size()).cuda())
         model.zero_grad()
         return mask_grad_list
