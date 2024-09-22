@@ -4,7 +4,7 @@ The code for the SDBA paper(arXiv link) was implemented using Python 3.12.1, PyT
 ---
 
 ## Preparation
-First, download the Reddit dataset from https://github.com/ebagdasa/backdoor_federated_learning and save it in the /data directory.
+First, download the Reddit dataset from https://github.com/ebagdasa/backdoor_federated_learning and save it in the `/data` directory.
 
 Second, Set up the model saving checkpoint.
 
