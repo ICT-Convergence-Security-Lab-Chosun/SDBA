@@ -3,6 +3,7 @@
 ![SDBA](figure/fig1.png)
 The code for the SDBA paper(arXiv link) was implemented using Python 3.12.1, PyTorch 2.4.0, and Torchvision 0.19.0.
 
+This repository is primarily based on the foundational code structure from "How to Backdoor Federated Learning" (https://github.com/ebagdasa/backdoor_federated_learning) and "Neurotoxin: Durable Backdoors in Federated Learning" (https://github.com/jhcknzzm/Federated-Learning-Backdoor) for code development.
 ---
 
 ## Preparation
