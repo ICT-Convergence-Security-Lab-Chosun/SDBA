@@ -49,7 +49,7 @@ To perform the Neurotoxin attack, rename `helper_neurotoxin.py` to `helper.py` a
 `--poison_lr 0.6` : Learning rate for malicious clients\
 `--attack_num 100` : Number of attacks to perform\
 `--start_epoch 2001` : Starting epoch for the training\
-`--run_name filename` : Name for saved backdoor or benign model file\
+`--run_name filename` : Name for saved backdoor_acc or benign_acc file\
 `--PGD 1` : Activate Projected Gradient Descent\
 `--GPU_id 0` : Specify the GPU ID to use\
 `--masking True` : Enable SDBA masking technique
