@@ -5,8 +5,7 @@ The code for the SDBA paper(arXiv link) was implemented using Python 3.12.1, PyT
 
 This repository is primarily based on the foundational code structure from\
 "How to Backdoor Federated Learning" (https://github.com/ebagdasa/backdoor_federated_learning) and\
-"Neurotoxin: Durable Backdoors in Federated Learning" (https://github.com/jhcknzzm/Federated-Learning-Backdoor) \
-for code development.
+"Neurotoxin: Durable Backdoors in Federated Learning" (https://github.com/jhcknzzm/Federated-Learning-Backdoor) for code development.
 
 ---
 
