@@ -66,6 +66,8 @@ To perform the Neurotoxin attack, rename `helper_neurotoxin.py` to `helper.py` a
 ### GPT-2 Model Parameters
 `--mlp_fc 1.0` : MLP fully connected layer masking ratio
 
+---
+
 ## Citation
 
 If you find this repository helpful for your work, we would appreciate it if you could cite our paper.
