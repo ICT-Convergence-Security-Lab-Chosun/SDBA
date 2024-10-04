@@ -1,4 +1,4 @@
-# SDBA: A Stealthy and Long-Lasting Durable Backdoor Attacks in Federated Learning
+# SDBA: A Stealthy and Long-Lasting Durable Backdoor Attack in Federated Learning
 
 ![SDBA](figure/fig1.png)
 The code for the SDBA paper([arXiv link](https://arxiv.org/abs/2409.14805)) was implemented using Python 3.12.1, PyTorch 2.4.0, and Torchvision 0.19.0.
