@@ -383,8 +383,8 @@ class Helper:
                     norm_diff = norm_diff ** 2
                 score_each[i][j] += norm_diff;
 
-        tmp = copy.deepcopy(w)
-        difference_tmp = copy.deepcopy(w)
+        #tmp = copy.deepcopy(w)
+        #difference_tmp = copy.deepcopy(w)
 
         ## l = n - f - 2
         l = num_users - num_comps - 2
