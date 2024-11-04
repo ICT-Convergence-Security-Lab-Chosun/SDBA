@@ -310,10 +310,7 @@ class Helper:
                 if 'LongTensor' in update_per_layer.type():
                     pass
                 else:
-                    if self.params['model'] == 'GPT2':
-                        update_per_layer.add_(self.dp_noise(data, sigma = 0.00001).cuda())
-                    else:
-                        update_per_layer.add_(self.dp_noise(data).cuda())
+                    update_per_layer.add_(self.dp_noise(data).cuda())
 
             data.add_(update_per_layer)
 
