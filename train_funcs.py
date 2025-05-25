@@ -391,7 +391,7 @@ def train_gpt2_poison(helper, model, poison_optimizer, criterion, mask_grad_list
                     preds_sum = torch.sum(preds[:,list(set(target_labels))][index_loss], dim=1)
                     loss += -torch.mean(torch.log(preds_sum), dim=0)
         loss.backward(retain_graph=True)
-        if helper.params['gradmask_ratio'] != 1:
+        if helper.params['gradmask_ratio'] != 1 or helper.params['masking'] == True:
             apply_grad_mask(model, mask_grad_list)
         torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
         poison_optimizer.step()
