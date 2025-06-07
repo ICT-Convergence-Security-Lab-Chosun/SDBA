@@ -272,7 +272,7 @@ class Helper:
         # if self.params['dataset'] == 'IMDB':
         #     return 0.1
         if self.params['model'] == 'GPT2':
-            return 10
+            return 1
             
         return 1
         # return 1
