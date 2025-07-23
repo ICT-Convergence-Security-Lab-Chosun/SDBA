@@ -3,6 +3,9 @@ Insert your Hugging Face token into the `login(token="input your huggingface tok
 
 The dataset and model will be loaded via Hugging Face.
 
+To train the model until convergence (e.g., 200 rounds), run the following command:
+`python Fed.py --rounds 200`
+
 ## Performing the Attack
 
 ### SDBA
