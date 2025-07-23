@@ -8,6 +8,8 @@ This repository is primarily based on the foundational code structure from\
 "Neurotoxin: Durable Backdoors in Federated Learning" (https://github.com/jhcknzzm/Federated-Learning-Backdoor) for code development.
 
 ---
+## T5 experiments
+For details on the T5 experiments, please check the [T5 folder](./T5).
 
 ## Preparation
 First, download the Reddit dataset from https://github.com/ebagdasa/backdoor_federated_learning and save it in the `/data` directory.
