@@ -360,6 +360,8 @@ def main(args):
             copy_params(local_model, global_state)
             if cid == 0 and args.attack_rounds[0] <= rnd <= args.attack_rounds[1]:
                 benign_cid_for_std = random.choice([i for i in range(1, args.num_clients)])
+                
+                # For convenience, we use a random benign client's data instead of the attacker's own benign set
                 benign_std_dict = compute_std_from_benign_client(
                     benign_cid_for_std, global_model, global_state,
                     shards[benign_cid_for_std], tokenizer, data_collator, args, device
