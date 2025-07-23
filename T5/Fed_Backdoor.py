@@ -338,7 +338,6 @@ def main(args):
                 loss.backward()
                 mask_grad_list = []
 
-                # masking logic
                 for name, param in local_model.named_parameters():
                     print('---------start--------------------')
                     print('layer_name : ', name)
