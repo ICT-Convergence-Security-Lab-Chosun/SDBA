@@ -75,11 +75,15 @@ To perform the Neurotoxin attack, rename `helper_neurotoxin.py` to `helper.py` a
 If you find this repository helpful for your work, we would appreciate it if you could cite our paper.
 
 ```
-@article{choe2024sdba,
-  title={SDBA: A Stealthy and Long-Lasting Durable Backdoor Attack in Federated Learning},
+@ARTICLE{11098907,
   author={Choe, Minyeong and Park, Cheolhee and Seo, Changho and Kim, Hyunil},
-  journal={arXiv preprint arXiv:2409.14805},
-  year={2024}
-}
+  journal={IEEE Transactions on Dependable and Secure Computing}, 
+  title={SDBA: A Stealthy and Long-Lasting Durable Backdoor Attack in Federated Learning}, 
+  year={2025},
+  volume={},
+  number={},
+  pages={1-14},
+  keywords={Natural language processing;Federated learning;Training;Servers;Computational modeling;Security;Data models;Analytical models;Transformers;Long short term memory;Backdoor Attack;Backdoor Durability;Backdoor Stealthiness;Federated Learning (FL);Natural Language Processing (NLP)},
+  doi={10.1109/TDSC.2025.3593640}}
 ```
 
