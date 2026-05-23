@@ -80,10 +80,10 @@ If you find this repository helpful for your work, we would appreciate it if you
   journal={IEEE Transactions on Dependable and Secure Computing}, 
   title={SDBA: A Stealthy and Long-Lasting Durable Backdoor Attack in Federated Learning}, 
   year={2025},
-  volume={},
-  number={},
-  pages={1-14},
-  keywords={Natural language processing;Federated learning;Training;Servers;Computational modeling;Security;Data models;Analytical models;Transformers;Long short term memory;Backdoor Attack;Backdoor Durability;Backdoor Stealthiness;Federated Learning (FL);Natural Language Processing (NLP)},
+  volume={22},
+  number={6},
+  pages={6929-6942},
+  keywords={Natural language processing;Federated learning;Training;Servers;Computational modeling;Security;Data models;Analytical models;Transformers;Long short term memory;Backdoor attack;backdoor durability;backdoor stealthiness;federated learning (FL);natural language processing (NLP)},
   doi={10.1109/TDSC.2025.3593640}}
 ```
 
